@@ -29,7 +29,7 @@ const App = props => {
   setError(null);
 
   try{
-    const response = await fetch('https://userinformation-41c01-default-rtdb.europe-west1.firebasedatabase.app/user.json');
+    const response = await fetch('link-from-firebase/user.json');
 
     if(!response.ok){
       throw new Error('Bad Request')
@@ -75,7 +75,7 @@ const App = props => {
         setError(null);
         setIsLoading(true);
         try {
-            const response = await fetch('https://userinformation-41c01-default-rtdb.europe-west1.firebasedatabase.app/user.json', {
+            const response = await fetch('link-from-firebase/user.json');', {
                 method: 'POST',
                 body: JSON.stringify(newUres),
                 headers: {
